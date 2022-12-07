@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fa6fd07c87954035808819256ec89eba" Name="Diagram1" ZoomLevel="59">
+        <EntityTypeShape EntityType="studbaseModel.fdata" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="studbaseModel.keylinks" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="studbaseModel.skard" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="studbaseModel.struct_d_rp" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="studbaseModel.wkardc_rp" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="studbaseModel.FK_keylinks_fdata_npp" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_agreement" Width="1.5" PointX="12.625" PointY="7.375" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_catalog" Width="1.5" PointX="10.375" PointY="10.125" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_contract" Width="1.5" PointX="15.625" PointY="5.875" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_cost" Width="1.5" PointX="12.625" PointY="12" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_cost_calculation" Width="1.5" PointX="14.875" PointY="13.375" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_cost_order" Width="1.5" PointX="10.375" PointY="14.375" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_debt_payment" Width="1.5" PointX="17.875" PointY="8.25" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_housing" Width="1.5" PointX="13.375" PointY="3.375" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_manual_agreement" Width="1.5" PointX="17.875" PointY="11.375" />
+        <EntityTypeShape EntityType="studbaseModel.hostel_settings" Width="1.5" PointX="10.375" PointY="0.75" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_agreement_fdata_npp" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_contract_fdata_npp" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_manual_agreement_fdata_npp" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_agreement_hostel_catalog_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_agreement_hostel_contract_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_agreement_hostel_cost_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_contract_hostel_contract_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_cost_calculation_hostel_catalog_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_cost_hostel_catalog_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_manual_agreement_hostel_catalog_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_contract_hostel_cost_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_contract_hostel_housing_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_debt_payment_hostel_contract_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_cost_calculation_hostel_cost_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_cost_hostel_cost_order_id" />
+        <AssociationConnector Association="studbaseModel.FK_hostel_manual_agreement_hostel_cost_id" />
+        <EntityTypeShape EntityType="studbaseModel.gal_chief" Width="1.5" PointX="10.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

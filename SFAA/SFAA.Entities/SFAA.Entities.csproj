@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA135FEB-891E-4F1C-AD62-6C7A7AAAB09E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SFAA.Entities</RootNamespace>
+    <AssemblyName>SFAA.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.1.3.1, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.1.3.1\lib\net461\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.5.0.0\lib\net461\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionData.cs" />
+    <Compile Include="CatalogJson\JsonDisciplines.cs" />
+    <Compile Include="JsonEnterpriseHash.cs" />
+    <Compile Include="Catalog\ListDiscipline.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30043.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30044.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30030.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30052.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30006.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30080.cs" />
+    <Compile Include="GalOrder\GalOrderStudents31030.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30051.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30007.cs" />
+    <Compile Include="GalOrder\GalOrderStudents31075.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30015.cs" />
+    <Compile Include="GalOrder\GalOrderStudents31076.cs" />
+    <Compile Include="JsonEnterprises.cs" />
+    <Compile Include="JsonGroupStudensList.cs" />
+    <Compile Include="JsonLecture.cs" />
+    <Compile Include="JsonCurriculumInfo.cs" />
+    <Compile Include="JsonPracticeList.cs" />
+    <Compile Include="JsonWorkCurrStruct.cs" />
+    <Compile Include="List\JsonEntCat.cs" />
+    <Compile Include="SedEnum\FolderSedEnum.cs" />
+    <Compile Include="SedEnum\ViewSedEnum.cs" />
+    <Compile Include="SedEnum\TypeSedEnum.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30005.cs" />
+    <Compile Include="GalOrder\GalOrderStudents31074.cs" />
+    <Compile Include="JsonHistoryFioChange.cs" />
+    <Compile Include="EnumExtensions.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30004.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30041.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30011.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30002.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30045.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30082.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30081.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30042.cs" />
+    <Compile Include="GalOrder\GalOrderStudents30008.cs" />
+    <Compile Include="GalOrder\GalOrderSignature.cs" />
+    <Compile Include="GalOrder\GalOrder.cs" />
+    <Compile Include="General\ApiUsers.cs" />
+    <Compile Include="GlobalSettings.cs" />
+    <Compile Include="Goszakupki\Goszakupki.cs" />
+    <Compile Include="Goszakupki\GoszakupkiJson.cs" />
+    <Compile Include="JsonKursTheme.cs" />
+    <Compile Include="JsonKursThemeOfStudent.cs" />
+    <Compile Include="JsonExtraListForStudent.cs" />
+    <Compile Include="CatalogJson\JsonStudents.cs" />
+    <Compile Include="ListRecordUpdate.cs" />
+    <Compile Include="ListRecordDelete.cs" />
+    <Compile Include="ListEmployee.cs" />
+    <Compile Include="Catalog\ListStudent.cs" />
+    <Compile Include="JsonCatalogMarks.cs" />
+    <Compile Include="JsonStructList.cs" />
+    <Compile Include="JsonStudentOfList.cs" />
+    <Compile Include="JsonListExaminerOfList.cs" />
+    <Compile Include="JsonTeacherList.cs" />
+    <Compile Include="JsonFnpp.cs" />
+    <Compile Include="List\JsonStructListDip.cs" />
+    <Compile Include="List\JsonStudentOfListDip.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="FormEduEnum.cs" />
+    <Compile Include="MarkTypeEnum.cs" />
+    <Compile Include="Priem\ListHostelContract.cs" />
+    <Compile Include="Student\JsonRecordBook.cs" />
+    <Compile Include="Student\ListOneRecordFromRecordBook.cs" />
+    <Compile Include="UlistTypeEnum.cs" />
+    <Compile Include="OperationTypeEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ListStatus.cs" />
+    <Compile Include="HttpStatusCodeEnum.cs" />
+    <Compile Include="RequestTypeEnum.cs" />
+    <Compile Include="ServiceResponse.cs" />
+    <Compile Include="TeacherList.cs" />
+    <Compile Include="WorkCurr\ListWorkCurrDisciplineType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

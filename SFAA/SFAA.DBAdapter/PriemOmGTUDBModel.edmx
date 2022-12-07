@@ -1,0 +1,1670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="studbaseModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="fdata">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fam" Type="varchar" MaxLength="40" />
+          <Property Name="nam" Type="varchar" MaxLength="40" />
+          <Property Name="otc" Type="varchar" MaxLength="40" />
+          <Property Name="pol" Type="int" />
+          <Property Name="rogd" Type="date" />
+          <Property Name="stob" Type="char" MaxLength="3" />
+          <Property Name="stsp" Type="char" MaxLength="3" />
+          <Property Name="inostr" Type="char" MaxLength="1" />
+          <Property Name="gragd" Type="int" />
+          <Property Name="nacion" Type="char" MaxLength="2" />
+          <Property Name="kur" Type="varchar" MaxLength="1" />
+          <Property Name="kkor" Type="int" />
+          <Property Name="user" Type="varchar" MaxLength="30" />
+          <Property Name="mestogos" Type="int" />
+          <Property Name="mestokladr" Type="char" MaxLength="19" />
+          <Property Name="mestoadr" Type="varchar" MaxLength="255" />
+          <Property Name="mestoindex" Type="char" MaxLength="6" />
+          <Property Name="svjaz" Type="varchar" MaxLength="70" />
+          <Property Name="phones" Type="text" />
+          <Property Name="prof" Type="char" MaxLength="1" />
+          <Property Name="zakr" Type="char" MaxLength="1" />
+          <Property Name="dkor" Type="datetime" Precision="0" />
+          <Property Name="sotel" Type="varchar" MaxLength="12" />
+          <Property Name="dolgn" Type="text" />
+          <Property Name="email" Type="varchar" MaxLength="250" />
+          <Property Name="gorod" Type="varchar" MaxLength="6" />
+          <Property Name="raion" Type="varchar" MaxLength="10" />
+          <Property Name="fotocheck" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="webpwd" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="obshaga" Type="char" MaxLength="1" />
+          <Property Name="bgos" Type="int" />
+          <Property Name="bkladr" Type="char" MaxLength="19" />
+          <Property Name="badr" Type="varchar" MaxLength="100" />
+          <Property Name="bindex" Type="char" MaxLength="6" />
+          <Property Name="ppodr" Type="varchar" MaxLength="6" />
+          <Property Name="faktgos" Type="int" />
+          <Property Name="faktkladr" Type="char" MaxLength="19" />
+          <Property Name="faktadr" Type="varchar" MaxLength="255" />
+          <Property Name="faktindex" Type="char" MaxLength="6" />
+          <Property Name="webstep" Type="int" />
+          <Property Name="mestodom" Type="varchar" MaxLength="10" />
+          <Property Name="mestokorp" Type="varchar" MaxLength="10" />
+          <Property Name="mestokvart" Type="varchar" MaxLength="10" />
+          <Property Name="bdom" Type="varchar" MaxLength="10" />
+          <Property Name="bkorp" Type="varchar" MaxLength="10" />
+          <Property Name="bkvart" Type="varchar" MaxLength="10" />
+          <Property Name="faktdom" Type="varchar" MaxLength="10" />
+          <Property Name="faktkorp" Type="varchar" MaxLength="10" />
+          <Property Name="faktkvart" Type="varchar" MaxLength="10" />
+          <Property Name="vozvrat" Type="int" />
+          <Property Name="dr" Type="datetime" Precision="0" />
+          <Property Name="gal_nation" Type="varchar" MaxLength="30" />
+          <Property Name="gal_validated" Type="bool" />
+          <Property Name="obraz_full" Type="text" />
+          <Property Name="_goodnpp" Type="int" />
+          <Property Name="kfb" Type="varchar" MaxLength="255" />
+          <Property Name="clink" Type="int" />
+          <Property Name="kfb1" Type="varchar" MaxLength="255" />
+          <Property Name="inn" Type="varchar" MaxLength="12" />
+          <Property Name="snils" Type="varchar" MaxLength="14" />
+          <Property Name="kfbdr" Type="datetime" Precision="0" />
+          <Property Name="rgos" Type="int" />
+          <Property Name="rkladr" Type="char" MaxLength="19" />
+          <Property Name="radr" Type="varchar" MaxLength="255" />
+          <Property Name="rindex" Type="char" MaxLength="6" />
+          <Property Name="rdom" Type="varchar" MaxLength="10" />
+          <Property Name="rkorp" Type="varchar" MaxLength="10" />
+          <Property Name="rkvart" Type="varchar" MaxLength="10" />
+          <Property Name="afilesphoto" Type="int" />
+        </EntityType>
+        <EntityType Name="gal_chief">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="cdepartment" Type="varbinary" MaxLength="8" />
+          <Property Name="cperson" Type="varbinary" MaxLength="8" />
+          <Property Name="isChief" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hostel_agreement">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fnpp" Type="int" Nullable="false" />
+          <Property Name="hcid" Type="int" Nullable="false" />
+          <Property Name="hcostid" Type="int" Nullable="false" />
+          <Property Name="agrType" Type="int" Nullable="false" />
+          <Property Name="agrBegin" Type="date" />
+          <Property Name="agrEnd" Type="date" />
+          <Property Name="order" Type="varchar" MaxLength="255" />
+          <Property Name="filename" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hostel_catalog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="parent" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="hostel_contract">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fnpp" Type="int" Nullable="false" />
+          <Property Name="student" Type="varchar" MaxLength="20" />
+          <Property Name="contNumber" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="contDate" Type="date" Nullable="false" />
+          <Property Name="contType" Type="int" Nullable="false" />
+          <Property Name="order" Type="varchar" MaxLength="255" />
+          <Property Name="orderDate" Type="date" />
+          <Property Name="contBegin" Type="date" Nullable="false" />
+          <Property Name="contEnd" Type="date" Nullable="false" />
+          <Property Name="factLivBegDate" Type="date" />
+          <Property Name="factLivEndDate" Type="date" />
+          <Property Name="housingId" Type="int" Nullable="false" />
+          <Property Name="hcostid" Type="int" Nullable="false" />
+          <Property Name="costTotal" Type="decimal" Precision="11" Scale="2" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="change" Type="date" />
+          <Property Name="reason" Type="varchar" MaxLength="255" />
+          <Property Name="filename" Type="varchar" MaxLength="32" />
+          <Property Name="filenameRVP" Type="varchar" MaxLength="32" />
+          <Property Name="ulivNrec" Type="varchar" MaxLength="20" />
+          <Property Name="isPopulate" Type="int" />
+          <Property Name="dateConfirmPopulate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="hostel_cost">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hostel" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="flatType" Type="int" />
+          <Property Name="costMonth" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="costDateBegin" Type="date" Nullable="false" />
+          <Property Name="contType" Type="int" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="255" />
+          <Property Name="costDay" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="AmountDay" Type="int" />
+          <Property Name="costMonthSocial" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="descriptionSocial" Type="varchar" MaxLength="255" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="costOrder" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hostel_cost_calculation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="calculationDescriptionId" Type="int" Nullable="false" />
+          <Property Name="costId" Type="int" Nullable="false" />
+          <Property Name="amountOfPayments" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hostel_cost_order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="number" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="date" Type="date" Nullable="false" />
+          <Property Name="description" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hostel_debt_payment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hcid" Type="int" Nullable="false" />
+          <Property Name="debt" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hostel_housing">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hostel" Type="int" Nullable="false" />
+          <Property Name="block" Type="varchar" MaxLength="255" />
+          <Property Name="flat" Type="int" Nullable="false" />
+          <Property Name="area" Type="decimal" Precision="10" Scale="1" Nullable="false" />
+          <Property Name="flatType" Type="int" Nullable="false" />
+          <Property Name="room" Type="varchar" MaxLength="255" />
+          <Property Name="type" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hostel_manual_agreement">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fnpp" Type="int" Nullable="false" />
+          <Property Name="student" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gal_order" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="hcostid" Type="int" Nullable="false" />
+          <Property Name="agrType" Type="int" Nullable="false" />
+          <Property Name="agrBegin" Type="date" />
+          <Property Name="agrEnd" Type="date" />
+          <Property Name="order" Type="varchar" MaxLength="255" />
+          <Property Name="filename" Type="varchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hostel_settings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="value" Type="text" Nullable="false" />
+          <Property Name="description" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="keylinks">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fnpp" Type="int" />
+          <Property Name="lotus_unid" Type="char" MaxLength="32" />
+          <Property Name="1c_unid" Type="guid" />
+          <Property Name="gal_unid" Type="varbinary" MaxLength="8" />
+          <Property Name="passprom" Type="varchar" MaxLength="255" />
+          <Property Name="userprom" Type="varchar" MaxLength="255" />
+          <Property Name="bitrix_unid" Type="varchar" MaxLength="255" />
+          <Property Name="fvalidator" Type="int" />
+          <Property Name="valid" Type="bool" />
+          <Property Name="dv" Type="datetime" Precision="0" />
+          <Property Name="wlotus_unid" Type="char" MaxLength="32" />
+          <Property Name="adpass" Type="varchar" MaxLength="255" />
+          <Property Name="adname" Type="varchar" MaxLength="255" />
+          <Property Name="adphone" Type="varchar" MaxLength="11" />
+          <Property Name="addc" Type="datetime" Precision="0" />
+          <Property Name="role" Type="bit" />
+          <Property Name="1c_unid_rp" Type="guid" />
+        </EntityType>
+        <EntityType Name="skard">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fnpp" Type="int" />
+          <Property Name="prudal" Type="char" MaxLength="1" />
+          <Property Name="gruppa" Type="varchar" MaxLength="20" />
+          <Property Name="fak" Type="varchar" MaxLength="255" />
+          <Property Name="spec" Type="varchar" MaxLength="255" />
+          <Property Name="form" Type="varchar" MaxLength="255" />
+          <Property Name="fin" Type="varchar" MaxLength="255" />
+          <Property Name="du" Type="datetime" Precision="0" />
+          <Property Name="dr" Type="datetime" Precision="0" />
+          <Property Name="user" Type="varchar" MaxLength="16" />
+          <Property Name="kurs" Type="int" />
+          <Property Name="contract" Type="int" />
+          <Property Name="ytransf" Type="int" />
+          <Property Name="ustate" Type="int" />
+          <Property Name="ifak" Type="int" />
+          <Property Name="iform" Type="int" />
+          <Property Name="ifin" Type="int" />
+          <Property Name="ispec" Type="int" />
+          <Property Name="knpp" Type="int" />
+          <Property Name="zorder" Type="int" />
+          <Property Name="qualif" Type="varchar" MaxLength="50" />
+          <Property Name="iqualif" Type="int" />
+          <Property Name="gal_chair" Type="varchar" MaxLength="64" />
+          <Property Name="gal_group" Type="varchar" MaxLength="16" />
+          <Property Name="gal_faculty" Type="varchar" MaxLength="50" />
+          <Property Name="gal_nation" Type="varchar" MaxLength="100" />
+          <Property Name="gal_specname" Type="varchar" MaxLength="125" />
+          <Property Name="gal_speccode" Type="varchar" MaxLength="20" />
+          <Property Name="dr_gal" Type="datetime" Precision="0" />
+          <Property Name="dr_lot" Type="datetime" Precision="0" />
+          <Property Name="gal_srec" Type="binary" MaxLength="8" />
+          <Property Name="ikaf" Type="int" />
+          <Property Name="gal_UP" Type="varbinary" MaxLength="8" />
+          <Property Name="todel" Type="bool" />
+          <Property Name="ispecialize" Type="int" />
+          <Property Name="itarget" Type="int" />
+          <Property Name="itargetdetail" Type="int" />
+          <Property Name="dn" Type="datetime" Precision="0" />
+          <Property Name="dno" Type="date" />
+        </EntityType>
+        <EntityType Name="struct_d_rp">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pnpp" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="500" />
+          <Property Name="l" Type="int" />
+          <Property Name="r" Type="int" />
+          <Property Name="u" Type="int" />
+          <Property Name="guid" Type="varchar" MaxLength="36" />
+          <Property Name="cd" Type="datetime" Precision="0" />
+          <Property Name="dd" Type="datetime" Precision="0" />
+          <Property Name="dr" Type="datetime" Precision="0" />
+          <Property Name="code" Type="varchar" MaxLength="50" />
+          <Property Name="prudal" Type="int" />
+          <Property Name="head" Type="varchar" MaxLength="255" />
+          <Property Name="composed" Type="bool" />
+          <Property Name="decomposed" Type="bool" />
+          <Property Name="ikafcode" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="wkardc_rp">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fnpp" Type="int" Nullable="false" />
+          <Property Name="ncontract" Type="varchar" MaxLength="25" />
+          <Property Name="stavka" Type="double" />
+          <Property Name="sovm" Type="varchar" MaxLength="10" />
+          <Property Name="du" Type="datetime" Precision="0" />
+          <Property Name="struct" Type="int" />
+          <Property Name="struct_state" Type="varchar" MaxLength="255" />
+          <Property Name="prudal" Type="char" MaxLength="1" />
+          <Property Name="dolgnost" Type="varchar" MaxLength="255" />
+          <Property Name="dr" Type="datetime" Precision="0" />
+          <Property Name="user" Type="varchar" MaxLength="16" />
+          <Property Name="kategoria" Type="varchar" MaxLength="150" />
+          <Property Name="outsource" Type="bool" />
+          <Property Name="guid" Type="guid" />
+          <Property Name="1cnpp" Type="varchar" MaxLength="255" />
+          <Property Name="di" Type="datetime" Precision="0" />
+          <Property Name="ipphone" Type="varchar" MaxLength="12" />
+          <Property Name="dn" Type="date" />
+          <Property Name="do" Type="date" />
+          <Property Name="vpo1cat" Type="varchar" MaxLength="25" />
+          <Property Name="otp" Type="int" />
+          <Property Name="year_mpps" Type="int" />
+          <Property Name="ВидДоговора" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK_hostel_agreement_fdata_npp">
+          <End Role="fdata" Type="Self.fdata" Multiplicity="1" />
+          <End Role="hostel_agreement" Type="Self.hostel_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fdata">
+              <PropertyRef Name="npp" />
+            </Principal>
+            <Dependent Role="hostel_agreement">
+              <PropertyRef Name="fnpp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_agreement_hostel_catalog_id">
+          <End Role="hostel_catalog" Type="Self.hostel_catalog" Multiplicity="1" />
+          <End Role="hostel_agreement" Type="Self.hostel_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_agreement">
+              <PropertyRef Name="agrType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_agreement_hostel_contract_id">
+          <End Role="hostel_contract" Type="Self.hostel_contract" Multiplicity="1" />
+          <End Role="hostel_agreement" Type="Self.hostel_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_contract">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_agreement">
+              <PropertyRef Name="hcid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_agreement_hostel_cost_id">
+          <End Role="hostel_cost" Type="Self.hostel_cost" Multiplicity="1" />
+          <End Role="hostel_agreement" Type="Self.hostel_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_agreement">
+              <PropertyRef Name="hcostid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_contract_fdata_npp">
+          <End Role="fdata" Type="Self.fdata" Multiplicity="1" />
+          <End Role="hostel_contract" Type="Self.hostel_contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fdata">
+              <PropertyRef Name="npp" />
+            </Principal>
+            <Dependent Role="hostel_contract">
+              <PropertyRef Name="fnpp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_contract_hostel_contract_id">
+          <End Role="hostel_catalog" Type="Self.hostel_catalog" Multiplicity="1" />
+          <End Role="hostel_contract" Type="Self.hostel_contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_contract">
+              <PropertyRef Name="contType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_contract_hostel_cost_id">
+          <End Role="hostel_cost" Type="Self.hostel_cost" Multiplicity="1" />
+          <End Role="hostel_contract" Type="Self.hostel_contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_contract">
+              <PropertyRef Name="hcostid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_contract_hostel_housing_id">
+          <End Role="hostel_housing" Type="Self.hostel_housing" Multiplicity="1" />
+          <End Role="hostel_contract" Type="Self.hostel_contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_housing">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_contract">
+              <PropertyRef Name="housingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_cost_calculation_hostel_catalog_id">
+          <End Role="hostel_catalog" Type="Self.hostel_catalog" Multiplicity="1" />
+          <End Role="hostel_cost_calculation" Type="Self.hostel_cost_calculation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_cost_calculation">
+              <PropertyRef Name="calculationDescriptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_cost_calculation_hostel_cost_id">
+          <End Role="hostel_cost" Type="Self.hostel_cost" Multiplicity="1" />
+          <End Role="hostel_cost_calculation" Type="Self.hostel_cost_calculation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_cost_calculation">
+              <PropertyRef Name="costId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_cost_hostel_catalog_id">
+          <End Role="hostel_catalog" Type="Self.hostel_catalog" Multiplicity="1" />
+          <End Role="hostel_cost" Type="Self.hostel_cost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_cost">
+              <PropertyRef Name="contType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_cost_hostel_cost_order_id">
+          <End Role="hostel_cost_order" Type="Self.hostel_cost_order" Multiplicity="1" />
+          <End Role="hostel_cost" Type="Self.hostel_cost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost_order">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_cost">
+              <PropertyRef Name="costOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_debt_payment_hostel_contract_id">
+          <End Role="hostel_contract" Type="Self.hostel_contract" Multiplicity="1" />
+          <End Role="hostel_debt_payment" Type="Self.hostel_debt_payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_contract">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_debt_payment">
+              <PropertyRef Name="hcid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_manual_agreement_fdata_npp">
+          <End Role="fdata" Type="Self.fdata" Multiplicity="1" />
+          <End Role="hostel_manual_agreement" Type="Self.hostel_manual_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fdata">
+              <PropertyRef Name="npp" />
+            </Principal>
+            <Dependent Role="hostel_manual_agreement">
+              <PropertyRef Name="fnpp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_manual_agreement_hostel_catalog_id">
+          <End Role="hostel_catalog" Type="Self.hostel_catalog" Multiplicity="1" />
+          <End Role="hostel_manual_agreement" Type="Self.hostel_manual_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_manual_agreement">
+              <PropertyRef Name="agrType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_manual_agreement_hostel_cost_id">
+          <End Role="hostel_cost" Type="Self.hostel_cost" Multiplicity="1" />
+          <End Role="hostel_manual_agreement" Type="Self.hostel_manual_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_manual_agreement">
+              <PropertyRef Name="hcostid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_keylinks_fdata_npp">
+          <End Role="fdata" Type="Self.fdata" Multiplicity="0..1" />
+          <End Role="keylinks" Type="Self.keylinks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fdata">
+              <PropertyRef Name="npp" />
+            </Principal>
+            <Dependent Role="keylinks">
+              <PropertyRef Name="fnpp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="studbaseModelStoreContainer">
+          <EntitySet Name="fdata" EntityType="Self.fdata" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="gal_chief" EntityType="Self.gal_chief" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_agreement" EntityType="Self.hostel_agreement" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_catalog" EntityType="Self.hostel_catalog" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_contract" EntityType="Self.hostel_contract" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_cost" EntityType="Self.hostel_cost" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_cost_calculation" EntityType="Self.hostel_cost_calculation" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_cost_order" EntityType="Self.hostel_cost_order" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_debt_payment" EntityType="Self.hostel_debt_payment" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_housing" EntityType="Self.hostel_housing" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_manual_agreement" EntityType="Self.hostel_manual_agreement" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="hostel_settings" EntityType="Self.hostel_settings" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="keylinks" EntityType="Self.keylinks" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="skard" EntityType="Self.skard" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="struct_d_rp" EntityType="Self.struct_d_rp" Schema="studbase" store:Type="Tables" />
+          <EntitySet Name="wkardc_rp" EntityType="Self.wkardc_rp" Schema="studbase" store:Type="Tables" />
+          <AssociationSet Name="FK_hostel_agreement_fdata_npp" Association="Self.FK_hostel_agreement_fdata_npp">
+            <End Role="fdata" EntitySet="fdata" />
+            <End Role="hostel_agreement" EntitySet="hostel_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_agreement_hostel_catalog_id" Association="Self.FK_hostel_agreement_hostel_catalog_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_agreement" EntitySet="hostel_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_agreement_hostel_contract_id" Association="Self.FK_hostel_agreement_hostel_contract_id">
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+            <End Role="hostel_agreement" EntitySet="hostel_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_agreement_hostel_cost_id" Association="Self.FK_hostel_agreement_hostel_cost_id">
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+            <End Role="hostel_agreement" EntitySet="hostel_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_contract_fdata_npp" Association="Self.FK_hostel_contract_fdata_npp">
+            <End Role="fdata" EntitySet="fdata" />
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_contract_hostel_contract_id" Association="Self.FK_hostel_contract_hostel_contract_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_contract_hostel_cost_id" Association="Self.FK_hostel_contract_hostel_cost_id">
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_contract_hostel_housing_id" Association="Self.FK_hostel_contract_hostel_housing_id">
+            <End Role="hostel_housing" EntitySet="hostel_housing" />
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_cost_calculation_hostel_catalog_id" Association="Self.FK_hostel_cost_calculation_hostel_catalog_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_cost_calculation" EntitySet="hostel_cost_calculation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_cost_calculation_hostel_cost_id" Association="Self.FK_hostel_cost_calculation_hostel_cost_id">
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+            <End Role="hostel_cost_calculation" EntitySet="hostel_cost_calculation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_cost_hostel_catalog_id" Association="Self.FK_hostel_cost_hostel_catalog_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_cost_hostel_cost_order_id" Association="Self.FK_hostel_cost_hostel_cost_order_id">
+            <End Role="hostel_cost_order" EntitySet="hostel_cost_order" />
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_debt_payment_hostel_contract_id" Association="Self.FK_hostel_debt_payment_hostel_contract_id">
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+            <End Role="hostel_debt_payment" EntitySet="hostel_debt_payment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_manual_agreement_fdata_npp" Association="Self.FK_hostel_manual_agreement_fdata_npp">
+            <End Role="fdata" EntitySet="fdata" />
+            <End Role="hostel_manual_agreement" EntitySet="hostel_manual_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_manual_agreement_hostel_catalog_id" Association="Self.FK_hostel_manual_agreement_hostel_catalog_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_manual_agreement" EntitySet="hostel_manual_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_manual_agreement_hostel_cost_id" Association="Self.FK_hostel_manual_agreement_hostel_cost_id">
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+            <End Role="hostel_manual_agreement" EntitySet="hostel_manual_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_keylinks_fdata_npp" Association="Self.FK_keylinks_fdata_npp">
+            <End Role="fdata" EntitySet="fdata" />
+            <End Role="keylinks" EntitySet="keylinks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="studbaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="fdata">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fam" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="nam" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="otc" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="pol" Type="Int32" />
+          <Property Name="rogd" Type="DateTime" />
+          <Property Name="stob" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="stsp" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="inostr" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="gragd" Type="Int32" />
+          <Property Name="nacion" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="kur" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="kkor" Type="Int32" />
+          <Property Name="user" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="mestogos" Type="Int32" />
+          <Property Name="mestokladr" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+          <Property Name="mestoadr" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="mestoindex" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="svjaz" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="phones" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="prof" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="zakr" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="dkor" Type="DateTime" />
+          <Property Name="sotel" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="dolgn" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="gorod" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="raion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="fotocheck" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="webpwd" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="obshaga" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="bgos" Type="Int32" />
+          <Property Name="bkladr" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+          <Property Name="badr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="bindex" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="ppodr" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="faktgos" Type="Int32" />
+          <Property Name="faktkladr" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+          <Property Name="faktadr" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="faktindex" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="webstep" Type="Int32" />
+          <Property Name="mestodom" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="mestokorp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="mestokvart" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="bdom" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="bkorp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="bkvart" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="faktdom" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="faktkorp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="faktkvart" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="vozvrat" Type="Int32" />
+          <Property Name="dr" Type="DateTime" />
+          <Property Name="gal_nation" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="gal_validated" Type="Boolean" />
+          <Property Name="obraz_full" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="C_goodnpp" Type="Int32" />
+          <Property Name="kfb" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="clink" Type="Int32" />
+          <Property Name="kfb1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="inn" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="snils" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="kfbdr" Type="DateTime" />
+          <Property Name="rgos" Type="Int32" />
+          <Property Name="rkladr" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+          <Property Name="radr" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="rindex" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="rdom" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="rkorp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="rkvart" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="afilesphoto" Type="Int32" />
+          <NavigationProperty Name="keylinks" Relationship="Self.FK_keylinks_fdata_npp" FromRole="fdata" ToRole="keylinks" />
+          <NavigationProperty Name="hostel_agreement" Relationship="studbaseModel.FK_hostel_agreement_fdata_npp" FromRole="fdata" ToRole="hostel_agreement" />
+          <NavigationProperty Name="hostel_contract" Relationship="studbaseModel.FK_hostel_contract_fdata_npp" FromRole="fdata" ToRole="hostel_contract" />
+          <NavigationProperty Name="hostel_manual_agreement" Relationship="studbaseModel.FK_hostel_manual_agreement_fdata_npp" FromRole="fdata" ToRole="hostel_manual_agreement" />
+        </EntityType>
+        <EntityType Name="keylinks">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fnpp" Type="Int32" />
+          <Property Name="lotus_unid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="C1c_unid" Type="Guid" />
+          <Property Name="gal_unid" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="passprom" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="userprom" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="bitrix_unid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="fvalidator" Type="Int32" />
+          <Property Name="valid" Type="Boolean" />
+          <Property Name="dv" Type="DateTime" />
+          <Property Name="wlotus_unid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="adpass" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="adname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="adphone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="addc" Type="DateTime" />
+          <Property Name="role" Type="Boolean" />
+          <Property Name="C1c_unid_rp" Type="Guid" />
+          <NavigationProperty Name="fdata" Relationship="Self.FK_keylinks_fdata_npp" FromRole="keylinks" ToRole="fdata" />
+        </EntityType>
+        <EntityType Name="skard">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fnpp" Type="Int32" />
+          <Property Name="prudal" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="gruppa" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="fak" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="spec" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="form" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="fin" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="du" Type="DateTime" />
+          <Property Name="dr" Type="DateTime" />
+          <Property Name="user" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="kurs" Type="Int32" />
+          <Property Name="contract" Type="Int32" />
+          <Property Name="ytransf" Type="Int32" />
+          <Property Name="ustate" Type="Int32" />
+          <Property Name="ifak" Type="Int32" />
+          <Property Name="iform" Type="Int32" />
+          <Property Name="ifin" Type="Int32" />
+          <Property Name="ispec" Type="Int32" />
+          <Property Name="knpp" Type="Int32" />
+          <Property Name="zorder" Type="Int32" />
+          <Property Name="qualif" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="iqualif" Type="Int32" />
+          <Property Name="gal_chair" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="gal_group" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="gal_faculty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gal_nation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="gal_specname" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+          <Property Name="gal_speccode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="dr_gal" Type="DateTime" />
+          <Property Name="dr_lot" Type="DateTime" />
+          <Property Name="gal_srec" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ikaf" Type="Int32" />
+          <Property Name="gal_UP" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="todel" Type="Boolean" />
+          <Property Name="ispecialize" Type="Int32" />
+          <Property Name="itarget" Type="Int32" />
+          <Property Name="itargetdetail" Type="Int32" />
+          <Property Name="dn" Type="DateTime" />
+          <Property Name="dno" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="struct_d_rp">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pnpp" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="l" Type="Int32" />
+          <Property Name="r" Type="Int32" />
+          <Property Name="u" Type="Int32" />
+          <Property Name="guid" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="cd" Type="DateTime" />
+          <Property Name="dd" Type="DateTime" />
+          <Property Name="dr" Type="DateTime" />
+          <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="prudal" Type="Int32" />
+          <Property Name="head" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="composed" Type="Boolean" />
+          <Property Name="decomposed" Type="Boolean" />
+          <Property Name="ikafcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="wkardc_rp">
+          <Key>
+            <PropertyRef Name="npp" />
+          </Key>
+          <Property Name="npp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fnpp" Type="Int32" Nullable="false" />
+          <Property Name="ncontract" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="stavka" Type="Double" />
+          <Property Name="sovm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="du" Type="DateTime" />
+          <Property Name="struct" Type="Int32" />
+          <Property Name="struct_state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="prudal" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="dolgnost" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="dr" Type="DateTime" />
+          <Property Name="user" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="kategoria" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="outsource" Type="Boolean" />
+          <Property Name="guid" Type="Guid" />
+          <Property Name="C1cnpp" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="di" Type="DateTime" />
+          <Property Name="ipphone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="dn" Type="DateTime" />
+          <Property Name="do" Type="DateTime" />
+          <Property Name="vpo1cat" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="otp" Type="Int32" />
+          <Property Name="year_mpps" Type="Int32" />
+          <Property Name="ВидДоговора" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_keylinks_fdata_npp">
+          <End Role="fdata" Type="Self.fdata" Multiplicity="0..1" />
+          <End Role="keylinks" Type="Self.keylinks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fdata">
+              <PropertyRef Name="npp" />
+            </Principal>
+            <Dependent Role="keylinks">
+              <PropertyRef Name="fnpp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="studbaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="fdata" EntityType="Self.fdata" />
+          <EntitySet Name="keylinks" EntityType="Self.keylinks" />
+          <EntitySet Name="skard" EntityType="Self.skard" />
+          <EntitySet Name="struct_d_rp" EntityType="Self.struct_d_rp" />
+          <EntitySet Name="wkardc_rp" EntityType="Self.wkardc_rp" />
+          <AssociationSet Name="FK_keylinks_fdata_npp" Association="Self.FK_keylinks_fdata_npp">
+            <End Role="fdata" EntitySet="fdata" />
+            <End Role="keylinks" EntitySet="keylinks" />
+          </AssociationSet>
+          <EntitySet Name="hostel_agreement" EntityType="studbaseModel.hostel_agreement" />
+          <EntitySet Name="hostel_catalog" EntityType="studbaseModel.hostel_catalog" />
+          <EntitySet Name="hostel_contract" EntityType="studbaseModel.hostel_contract" />
+          <EntitySet Name="hostel_cost" EntityType="studbaseModel.hostel_cost" />
+          <EntitySet Name="hostel_cost_calculation" EntityType="studbaseModel.hostel_cost_calculation" />
+          <EntitySet Name="hostel_cost_order" EntityType="studbaseModel.hostel_cost_order" />
+          <EntitySet Name="hostel_debt_payment" EntityType="studbaseModel.hostel_debt_payment" />
+          <EntitySet Name="hostel_housing" EntityType="studbaseModel.hostel_housing" />
+          <EntitySet Name="hostel_manual_agreement" EntityType="studbaseModel.hostel_manual_agreement" />
+          <EntitySet Name="hostel_settings" EntityType="studbaseModel.hostel_settings" />
+          <AssociationSet Name="FK_hostel_agreement_fdata_npp" Association="studbaseModel.FK_hostel_agreement_fdata_npp">
+            <End Role="fdata" EntitySet="fdata" />
+            <End Role="hostel_agreement" EntitySet="hostel_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_contract_fdata_npp" Association="studbaseModel.FK_hostel_contract_fdata_npp">
+            <End Role="fdata" EntitySet="fdata" />
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_manual_agreement_fdata_npp" Association="studbaseModel.FK_hostel_manual_agreement_fdata_npp">
+            <End Role="fdata" EntitySet="fdata" />
+            <End Role="hostel_manual_agreement" EntitySet="hostel_manual_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_agreement_hostel_catalog_id" Association="studbaseModel.FK_hostel_agreement_hostel_catalog_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_agreement" EntitySet="hostel_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_agreement_hostel_contract_id" Association="studbaseModel.FK_hostel_agreement_hostel_contract_id">
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+            <End Role="hostel_agreement" EntitySet="hostel_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_agreement_hostel_cost_id" Association="studbaseModel.FK_hostel_agreement_hostel_cost_id">
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+            <End Role="hostel_agreement" EntitySet="hostel_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_contract_hostel_contract_id" Association="studbaseModel.FK_hostel_contract_hostel_contract_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_cost_calculation_hostel_catalog_id" Association="studbaseModel.FK_hostel_cost_calculation_hostel_catalog_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_cost_calculation" EntitySet="hostel_cost_calculation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_cost_hostel_catalog_id" Association="studbaseModel.FK_hostel_cost_hostel_catalog_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_manual_agreement_hostel_catalog_id" Association="studbaseModel.FK_hostel_manual_agreement_hostel_catalog_id">
+            <End Role="hostel_catalog" EntitySet="hostel_catalog" />
+            <End Role="hostel_manual_agreement" EntitySet="hostel_manual_agreement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_contract_hostel_cost_id" Association="studbaseModel.FK_hostel_contract_hostel_cost_id">
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_contract_hostel_housing_id" Association="studbaseModel.FK_hostel_contract_hostel_housing_id">
+            <End Role="hostel_housing" EntitySet="hostel_housing" />
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_debt_payment_hostel_contract_id" Association="studbaseModel.FK_hostel_debt_payment_hostel_contract_id">
+            <End Role="hostel_contract" EntitySet="hostel_contract" />
+            <End Role="hostel_debt_payment" EntitySet="hostel_debt_payment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_cost_calculation_hostel_cost_id" Association="studbaseModel.FK_hostel_cost_calculation_hostel_cost_id">
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+            <End Role="hostel_cost_calculation" EntitySet="hostel_cost_calculation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_cost_hostel_cost_order_id" Association="studbaseModel.FK_hostel_cost_hostel_cost_order_id">
+            <End Role="hostel_cost_order" EntitySet="hostel_cost_order" />
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_hostel_manual_agreement_hostel_cost_id" Association="studbaseModel.FK_hostel_manual_agreement_hostel_cost_id">
+            <End Role="hostel_cost" EntitySet="hostel_cost" />
+            <End Role="hostel_manual_agreement" EntitySet="hostel_manual_agreement" />
+          </AssociationSet>
+          <EntitySet Name="gal_chief" EntityType="studbaseModel.gal_chief" />
+        </EntityContainer>
+        <EntityType Name="hostel_agreement">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fnpp" Type="Int32" Nullable="false" />
+          <Property Name="hcid" Type="Int32" Nullable="false" />
+          <Property Name="hcostid" Type="Int32" Nullable="false" />
+          <Property Name="agrType" Type="Int32" Nullable="false" />
+          <Property Name="agrBegin" Type="DateTime" />
+          <Property Name="agrEnd" Type="DateTime" />
+          <Property Name="order" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="filename" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="fdata" Relationship="studbaseModel.FK_hostel_agreement_fdata_npp" FromRole="hostel_agreement" ToRole="fdata" />
+          <NavigationProperty Name="hostel_catalog" Relationship="studbaseModel.FK_hostel_agreement_hostel_catalog_id" FromRole="hostel_agreement" ToRole="hostel_catalog" />
+          <NavigationProperty Name="hostel_contract" Relationship="studbaseModel.FK_hostel_agreement_hostel_contract_id" FromRole="hostel_agreement" ToRole="hostel_contract" />
+          <NavigationProperty Name="hostel_cost" Relationship="studbaseModel.FK_hostel_agreement_hostel_cost_id" FromRole="hostel_agreement" ToRole="hostel_cost" />
+        </EntityType>
+        <EntityType Name="hostel_catalog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="parent" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="hostel_agreement" Relationship="studbaseModel.FK_hostel_agreement_hostel_catalog_id" FromRole="hostel_catalog" ToRole="hostel_agreement" />
+          <NavigationProperty Name="hostel_contract" Relationship="studbaseModel.FK_hostel_contract_hostel_contract_id" FromRole="hostel_catalog" ToRole="hostel_contract" />
+          <NavigationProperty Name="hostel_cost_calculation" Relationship="studbaseModel.FK_hostel_cost_calculation_hostel_catalog_id" FromRole="hostel_catalog" ToRole="hostel_cost_calculation" />
+          <NavigationProperty Name="hostel_cost" Relationship="studbaseModel.FK_hostel_cost_hostel_catalog_id" FromRole="hostel_catalog" ToRole="hostel_cost" />
+          <NavigationProperty Name="hostel_manual_agreement" Relationship="studbaseModel.FK_hostel_manual_agreement_hostel_catalog_id" FromRole="hostel_catalog" ToRole="hostel_manual_agreement" />
+        </EntityType>
+        <EntityType Name="hostel_contract">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fnpp" Type="Int32" Nullable="false" />
+          <Property Name="student" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="contNumber" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="contDate" Type="DateTime" Nullable="false" />
+          <Property Name="contType" Type="Int32" Nullable="false" />
+          <Property Name="order" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="orderDate" Type="DateTime" />
+          <Property Name="contBegin" Type="DateTime" Nullable="false" />
+          <Property Name="contEnd" Type="DateTime" Nullable="false" />
+          <Property Name="factLivBegDate" Type="DateTime" />
+          <Property Name="factLivEndDate" Type="DateTime" />
+          <Property Name="housingId" Type="Int32" Nullable="false" />
+          <Property Name="hcostid" Type="Int32" Nullable="false" />
+          <Property Name="costTotal" Type="Decimal" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="change" Type="DateTime" />
+          <Property Name="reason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="filename" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="filenameRVP" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ulivNrec" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="isPopulate" Type="Int32" />
+          <Property Name="dateConfirmPopulate" Type="DateTime" />
+          <NavigationProperty Name="fdata" Relationship="studbaseModel.FK_hostel_contract_fdata_npp" FromRole="hostel_contract" ToRole="fdata" />
+          <NavigationProperty Name="hostel_agreement" Relationship="studbaseModel.FK_hostel_agreement_hostel_contract_id" FromRole="hostel_contract" ToRole="hostel_agreement" />
+          <NavigationProperty Name="hostel_catalog" Relationship="studbaseModel.FK_hostel_contract_hostel_contract_id" FromRole="hostel_contract" ToRole="hostel_catalog" />
+          <NavigationProperty Name="hostel_cost" Relationship="studbaseModel.FK_hostel_contract_hostel_cost_id" FromRole="hostel_contract" ToRole="hostel_cost" />
+          <NavigationProperty Name="hostel_housing" Relationship="studbaseModel.FK_hostel_contract_hostel_housing_id" FromRole="hostel_contract" ToRole="hostel_housing" />
+          <NavigationProperty Name="hostel_debt_payment" Relationship="studbaseModel.FK_hostel_debt_payment_hostel_contract_id" FromRole="hostel_contract" ToRole="hostel_debt_payment" />
+        </EntityType>
+        <EntityType Name="hostel_cost">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hostel" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="flatType" Type="Int32" />
+          <Property Name="costMonth" Type="Decimal" />
+          <Property Name="costDateBegin" Type="DateTime" Nullable="false" />
+          <Property Name="contType" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="costDay" Type="Decimal" />
+          <Property Name="AmountDay" Type="Int32" />
+          <Property Name="costMonthSocial" Type="Decimal" />
+          <Property Name="descriptionSocial" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="costOrder" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="hostel_agreement" Relationship="studbaseModel.FK_hostel_agreement_hostel_cost_id" FromRole="hostel_cost" ToRole="hostel_agreement" />
+          <NavigationProperty Name="hostel_catalog" Relationship="studbaseModel.FK_hostel_cost_hostel_catalog_id" FromRole="hostel_cost" ToRole="hostel_catalog" />
+          <NavigationProperty Name="hostel_contract" Relationship="studbaseModel.FK_hostel_contract_hostel_cost_id" FromRole="hostel_cost" ToRole="hostel_contract" />
+          <NavigationProperty Name="hostel_cost_calculation" Relationship="studbaseModel.FK_hostel_cost_calculation_hostel_cost_id" FromRole="hostel_cost" ToRole="hostel_cost_calculation" />
+          <NavigationProperty Name="hostel_cost_order" Relationship="studbaseModel.FK_hostel_cost_hostel_cost_order_id" FromRole="hostel_cost" ToRole="hostel_cost_order" />
+          <NavigationProperty Name="hostel_manual_agreement" Relationship="studbaseModel.FK_hostel_manual_agreement_hostel_cost_id" FromRole="hostel_cost" ToRole="hostel_manual_agreement" />
+        </EntityType>
+        <EntityType Name="hostel_cost_calculation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="calculationDescriptionId" Type="Int32" Nullable="false" />
+          <Property Name="costId" Type="Int32" Nullable="false" />
+          <Property Name="amountOfPayments" Type="Decimal" Nullable="false" />
+          <NavigationProperty Name="hostel_catalog" Relationship="studbaseModel.FK_hostel_cost_calculation_hostel_catalog_id" FromRole="hostel_cost_calculation" ToRole="hostel_catalog" />
+          <NavigationProperty Name="hostel_cost" Relationship="studbaseModel.FK_hostel_cost_calculation_hostel_cost_id" FromRole="hostel_cost_calculation" ToRole="hostel_cost" />
+        </EntityType>
+        <EntityType Name="hostel_cost_order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="number" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="hostel_cost" Relationship="studbaseModel.FK_hostel_cost_hostel_cost_order_id" FromRole="hostel_cost_order" ToRole="hostel_cost" />
+        </EntityType>
+        <EntityType Name="hostel_debt_payment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hcid" Type="Int32" Nullable="false" />
+          <Property Name="debt" Type="Decimal" Nullable="false" />
+          <NavigationProperty Name="hostel_contract" Relationship="studbaseModel.FK_hostel_debt_payment_hostel_contract_id" FromRole="hostel_debt_payment" ToRole="hostel_contract" />
+        </EntityType>
+        <EntityType Name="hostel_housing">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hostel" Type="Int32" Nullable="false" />
+          <Property Name="block" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="flat" Type="Int32" Nullable="false" />
+          <Property Name="area" Type="Decimal" Nullable="false" />
+          <Property Name="flatType" Type="Int32" Nullable="false" />
+          <Property Name="room" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="hostel_contract" Relationship="studbaseModel.FK_hostel_contract_hostel_housing_id" FromRole="hostel_housing" ToRole="hostel_contract" />
+        </EntityType>
+        <EntityType Name="hostel_manual_agreement">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fnpp" Type="Int32" Nullable="false" />
+          <Property Name="student" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gal_order" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="hcostid" Type="Int32" Nullable="false" />
+          <Property Name="agrType" Type="Int32" Nullable="false" />
+          <Property Name="agrBegin" Type="DateTime" />
+          <Property Name="agrEnd" Type="DateTime" />
+          <Property Name="order" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="filename" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="fdata" Relationship="studbaseModel.FK_hostel_manual_agreement_fdata_npp" FromRole="hostel_manual_agreement" ToRole="fdata" />
+          <NavigationProperty Name="hostel_catalog" Relationship="studbaseModel.FK_hostel_manual_agreement_hostel_catalog_id" FromRole="hostel_manual_agreement" ToRole="hostel_catalog" />
+          <NavigationProperty Name="hostel_cost" Relationship="studbaseModel.FK_hostel_manual_agreement_hostel_cost_id" FromRole="hostel_manual_agreement" ToRole="hostel_cost" />
+        </EntityType>
+        <EntityType Name="hostel_settings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="value" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_hostel_agreement_fdata_npp">
+          <End Type="studbaseModel.fdata" Role="fdata" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_agreement" Role="hostel_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fdata">
+              <PropertyRef Name="npp" />
+            </Principal>
+            <Dependent Role="hostel_agreement">
+              <PropertyRef Name="fnpp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_contract_fdata_npp">
+          <End Type="studbaseModel.fdata" Role="fdata" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_contract" Role="hostel_contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fdata">
+              <PropertyRef Name="npp" />
+            </Principal>
+            <Dependent Role="hostel_contract">
+              <PropertyRef Name="fnpp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_manual_agreement_fdata_npp">
+          <End Type="studbaseModel.fdata" Role="fdata" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_manual_agreement" Role="hostel_manual_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fdata">
+              <PropertyRef Name="npp" />
+            </Principal>
+            <Dependent Role="hostel_manual_agreement">
+              <PropertyRef Name="fnpp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_agreement_hostel_catalog_id">
+          <End Type="studbaseModel.hostel_catalog" Role="hostel_catalog" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_agreement" Role="hostel_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_agreement">
+              <PropertyRef Name="agrType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_agreement_hostel_contract_id">
+          <End Type="studbaseModel.hostel_contract" Role="hostel_contract" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_agreement" Role="hostel_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_contract">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_agreement">
+              <PropertyRef Name="hcid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_agreement_hostel_cost_id">
+          <End Type="studbaseModel.hostel_cost" Role="hostel_cost" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_agreement" Role="hostel_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_agreement">
+              <PropertyRef Name="hcostid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_contract_hostel_contract_id">
+          <End Type="studbaseModel.hostel_catalog" Role="hostel_catalog" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_contract" Role="hostel_contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_contract">
+              <PropertyRef Name="contType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_cost_calculation_hostel_catalog_id">
+          <End Type="studbaseModel.hostel_catalog" Role="hostel_catalog" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_cost_calculation" Role="hostel_cost_calculation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_cost_calculation">
+              <PropertyRef Name="calculationDescriptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_cost_hostel_catalog_id">
+          <End Type="studbaseModel.hostel_catalog" Role="hostel_catalog" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_cost" Role="hostel_cost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_cost">
+              <PropertyRef Name="contType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_manual_agreement_hostel_catalog_id">
+          <End Type="studbaseModel.hostel_catalog" Role="hostel_catalog" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_manual_agreement" Role="hostel_manual_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_manual_agreement">
+              <PropertyRef Name="agrType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_contract_hostel_cost_id">
+          <End Type="studbaseModel.hostel_cost" Role="hostel_cost" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_contract" Role="hostel_contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_contract">
+              <PropertyRef Name="hcostid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_contract_hostel_housing_id">
+          <End Type="studbaseModel.hostel_housing" Role="hostel_housing" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_contract" Role="hostel_contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_housing">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_contract">
+              <PropertyRef Name="housingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_debt_payment_hostel_contract_id">
+          <End Type="studbaseModel.hostel_contract" Role="hostel_contract" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_debt_payment" Role="hostel_debt_payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_contract">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_debt_payment">
+              <PropertyRef Name="hcid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_cost_calculation_hostel_cost_id">
+          <End Type="studbaseModel.hostel_cost" Role="hostel_cost" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_cost_calculation" Role="hostel_cost_calculation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_cost_calculation">
+              <PropertyRef Name="costId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_cost_hostel_cost_order_id">
+          <End Type="studbaseModel.hostel_cost_order" Role="hostel_cost_order" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_cost" Role="hostel_cost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost_order">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_cost">
+              <PropertyRef Name="costOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_hostel_manual_agreement_hostel_cost_id">
+          <End Type="studbaseModel.hostel_cost" Role="hostel_cost" Multiplicity="1" />
+          <End Type="studbaseModel.hostel_manual_agreement" Role="hostel_manual_agreement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hostel_cost">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hostel_manual_agreement">
+              <PropertyRef Name="hcostid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="gal_chief">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="cdepartment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="cperson" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="isChief" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="studbaseModelStoreContainer" CdmEntityContainer="studbaseEntities">
+          <EntitySetMapping Name="fdata">
+            <EntityTypeMapping TypeName="studbaseModel.fdata">
+              <MappingFragment StoreEntitySet="fdata">
+                <ScalarProperty Name="npp" ColumnName="npp" />
+                <ScalarProperty Name="fam" ColumnName="fam" />
+                <ScalarProperty Name="nam" ColumnName="nam" />
+                <ScalarProperty Name="otc" ColumnName="otc" />
+                <ScalarProperty Name="pol" ColumnName="pol" />
+                <ScalarProperty Name="rogd" ColumnName="rogd" />
+                <ScalarProperty Name="stob" ColumnName="stob" />
+                <ScalarProperty Name="stsp" ColumnName="stsp" />
+                <ScalarProperty Name="inostr" ColumnName="inostr" />
+                <ScalarProperty Name="gragd" ColumnName="gragd" />
+                <ScalarProperty Name="nacion" ColumnName="nacion" />
+                <ScalarProperty Name="kur" ColumnName="kur" />
+                <ScalarProperty Name="kkor" ColumnName="kkor" />
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="mestogos" ColumnName="mestogos" />
+                <ScalarProperty Name="mestokladr" ColumnName="mestokladr" />
+                <ScalarProperty Name="mestoadr" ColumnName="mestoadr" />
+                <ScalarProperty Name="mestoindex" ColumnName="mestoindex" />
+                <ScalarProperty Name="svjaz" ColumnName="svjaz" />
+                <ScalarProperty Name="phones" ColumnName="phones" />
+                <ScalarProperty Name="prof" ColumnName="prof" />
+                <ScalarProperty Name="zakr" ColumnName="zakr" />
+                <ScalarProperty Name="dkor" ColumnName="dkor" />
+                <ScalarProperty Name="sotel" ColumnName="sotel" />
+                <ScalarProperty Name="dolgn" ColumnName="dolgn" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="gorod" ColumnName="gorod" />
+                <ScalarProperty Name="raion" ColumnName="raion" />
+                <ScalarProperty Name="fotocheck" ColumnName="fotocheck" />
+                <ScalarProperty Name="webpwd" ColumnName="webpwd" />
+                <ScalarProperty Name="obshaga" ColumnName="obshaga" />
+                <ScalarProperty Name="bgos" ColumnName="bgos" />
+                <ScalarProperty Name="bkladr" ColumnName="bkladr" />
+                <ScalarProperty Name="badr" ColumnName="badr" />
+                <ScalarProperty Name="bindex" ColumnName="bindex" />
+                <ScalarProperty Name="ppodr" ColumnName="ppodr" />
+                <ScalarProperty Name="faktgos" ColumnName="faktgos" />
+                <ScalarProperty Name="faktkladr" ColumnName="faktkladr" />
+                <ScalarProperty Name="faktadr" ColumnName="faktadr" />
+                <ScalarProperty Name="faktindex" ColumnName="faktindex" />
+                <ScalarProperty Name="webstep" ColumnName="webstep" />
+                <ScalarProperty Name="mestodom" ColumnName="mestodom" />
+                <ScalarProperty Name="mestokorp" ColumnName="mestokorp" />
+                <ScalarProperty Name="mestokvart" ColumnName="mestokvart" />
+                <ScalarProperty Name="bdom" ColumnName="bdom" />
+                <ScalarProperty Name="bkorp" ColumnName="bkorp" />
+                <ScalarProperty Name="bkvart" ColumnName="bkvart" />
+                <ScalarProperty Name="faktdom" ColumnName="faktdom" />
+                <ScalarProperty Name="faktkorp" ColumnName="faktkorp" />
+                <ScalarProperty Name="faktkvart" ColumnName="faktkvart" />
+                <ScalarProperty Name="vozvrat" ColumnName="vozvrat" />
+                <ScalarProperty Name="dr" ColumnName="dr" />
+                <ScalarProperty Name="gal_nation" ColumnName="gal_nation" />
+                <ScalarProperty Name="gal_validated" ColumnName="gal_validated" />
+                <ScalarProperty Name="obraz_full" ColumnName="obraz_full" />
+                <ScalarProperty Name="C_goodnpp" ColumnName="_goodnpp" />
+                <ScalarProperty Name="kfb" ColumnName="kfb" />
+                <ScalarProperty Name="clink" ColumnName="clink" />
+                <ScalarProperty Name="kfb1" ColumnName="kfb1" />
+                <ScalarProperty Name="inn" ColumnName="inn" />
+                <ScalarProperty Name="snils" ColumnName="snils" />
+                <ScalarProperty Name="kfbdr" ColumnName="kfbdr" />
+                <ScalarProperty Name="rgos" ColumnName="rgos" />
+                <ScalarProperty Name="rkladr" ColumnName="rkladr" />
+                <ScalarProperty Name="radr" ColumnName="radr" />
+                <ScalarProperty Name="rindex" ColumnName="rindex" />
+                <ScalarProperty Name="rdom" ColumnName="rdom" />
+                <ScalarProperty Name="rkorp" ColumnName="rkorp" />
+                <ScalarProperty Name="rkvart" ColumnName="rkvart" />
+                <ScalarProperty Name="afilesphoto" ColumnName="afilesphoto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="keylinks">
+            <EntityTypeMapping TypeName="studbaseModel.keylinks">
+              <MappingFragment StoreEntitySet="keylinks">
+                <ScalarProperty Name="npp" ColumnName="npp" />
+                <ScalarProperty Name="fnpp" ColumnName="fnpp" />
+                <ScalarProperty Name="lotus_unid" ColumnName="lotus_unid" />
+                <ScalarProperty Name="C1c_unid" ColumnName="1c_unid" />
+                <ScalarProperty Name="gal_unid" ColumnName="gal_unid" />
+                <ScalarProperty Name="passprom" ColumnName="passprom" />
+                <ScalarProperty Name="userprom" ColumnName="userprom" />
+                <ScalarProperty Name="bitrix_unid" ColumnName="bitrix_unid" />
+                <ScalarProperty Name="fvalidator" ColumnName="fvalidator" />
+                <ScalarProperty Name="valid" ColumnName="valid" />
+                <ScalarProperty Name="dv" ColumnName="dv" />
+                <ScalarProperty Name="wlotus_unid" ColumnName="wlotus_unid" />
+                <ScalarProperty Name="adpass" ColumnName="adpass" />
+                <ScalarProperty Name="adname" ColumnName="adname" />
+                <ScalarProperty Name="adphone" ColumnName="adphone" />
+                <ScalarProperty Name="addc" ColumnName="addc" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="C1c_unid_rp" ColumnName="1c_unid_rp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="skard">
+            <EntityTypeMapping TypeName="studbaseModel.skard">
+              <MappingFragment StoreEntitySet="skard">
+                <ScalarProperty Name="dno" ColumnName="dno" />
+                <ScalarProperty Name="npp" ColumnName="npp" />
+                <ScalarProperty Name="fnpp" ColumnName="fnpp" />
+                <ScalarProperty Name="prudal" ColumnName="prudal" />
+                <ScalarProperty Name="gruppa" ColumnName="gruppa" />
+                <ScalarProperty Name="fak" ColumnName="fak" />
+                <ScalarProperty Name="spec" ColumnName="spec" />
+                <ScalarProperty Name="form" ColumnName="form" />
+                <ScalarProperty Name="fin" ColumnName="fin" />
+                <ScalarProperty Name="du" ColumnName="du" />
+                <ScalarProperty Name="dr" ColumnName="dr" />
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="kurs" ColumnName="kurs" />
+                <ScalarProperty Name="contract" ColumnName="contract" />
+                <ScalarProperty Name="ytransf" ColumnName="ytransf" />
+                <ScalarProperty Name="ustate" ColumnName="ustate" />
+                <ScalarProperty Name="ifak" ColumnName="ifak" />
+                <ScalarProperty Name="iform" ColumnName="iform" />
+                <ScalarProperty Name="ifin" ColumnName="ifin" />
+                <ScalarProperty Name="ispec" ColumnName="ispec" />
+                <ScalarProperty Name="knpp" ColumnName="knpp" />
+                <ScalarProperty Name="zorder" ColumnName="zorder" />
+                <ScalarProperty Name="qualif" ColumnName="qualif" />
+                <ScalarProperty Name="iqualif" ColumnName="iqualif" />
+                <ScalarProperty Name="gal_chair" ColumnName="gal_chair" />
+                <ScalarProperty Name="gal_group" ColumnName="gal_group" />
+                <ScalarProperty Name="gal_faculty" ColumnName="gal_faculty" />
+                <ScalarProperty Name="gal_nation" ColumnName="gal_nation" />
+                <ScalarProperty Name="gal_specname" ColumnName="gal_specname" />
+                <ScalarProperty Name="gal_speccode" ColumnName="gal_speccode" />
+                <ScalarProperty Name="dr_gal" ColumnName="dr_gal" />
+                <ScalarProperty Name="dr_lot" ColumnName="dr_lot" />
+                <ScalarProperty Name="gal_srec" ColumnName="gal_srec" />
+                <ScalarProperty Name="ikaf" ColumnName="ikaf" />
+                <ScalarProperty Name="gal_UP" ColumnName="gal_UP" />
+                <ScalarProperty Name="todel" ColumnName="todel" />
+                <ScalarProperty Name="ispecialize" ColumnName="ispecialize" />
+                <ScalarProperty Name="itarget" ColumnName="itarget" />
+                <ScalarProperty Name="itargetdetail" ColumnName="itargetdetail" />
+                <ScalarProperty Name="dn" ColumnName="dn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="struct_d_rp">
+            <EntityTypeMapping TypeName="studbaseModel.struct_d_rp">
+              <MappingFragment StoreEntitySet="struct_d_rp">
+                <ScalarProperty Name="ikafcode" ColumnName="ikafcode" />
+                <ScalarProperty Name="npp" ColumnName="npp" />
+                <ScalarProperty Name="pnpp" ColumnName="pnpp" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="l" ColumnName="l" />
+                <ScalarProperty Name="r" ColumnName="r" />
+                <ScalarProperty Name="u" ColumnName="u" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="cd" ColumnName="cd" />
+                <ScalarProperty Name="dd" ColumnName="dd" />
+                <ScalarProperty Name="dr" ColumnName="dr" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="prudal" ColumnName="prudal" />
+                <ScalarProperty Name="head" ColumnName="head" />
+                <ScalarProperty Name="composed" ColumnName="composed" />
+                <ScalarProperty Name="decomposed" ColumnName="decomposed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wkardc_rp">
+            <EntityTypeMapping TypeName="studbaseModel.wkardc_rp">
+              <MappingFragment StoreEntitySet="wkardc_rp">
+                <ScalarProperty Name="ВидДоговора" ColumnName="ВидДоговора" />
+                <ScalarProperty Name="year_mpps" ColumnName="year_mpps" />
+                <ScalarProperty Name="otp" ColumnName="otp" />
+                <ScalarProperty Name="vpo1cat" ColumnName="vpo1cat" />
+                <ScalarProperty Name="do" ColumnName="do" />
+                <ScalarProperty Name="dn" ColumnName="dn" />
+                <ScalarProperty Name="npp" ColumnName="npp" />
+                <ScalarProperty Name="fnpp" ColumnName="fnpp" />
+                <ScalarProperty Name="ncontract" ColumnName="ncontract" />
+                <ScalarProperty Name="stavka" ColumnName="stavka" />
+                <ScalarProperty Name="sovm" ColumnName="sovm" />
+                <ScalarProperty Name="du" ColumnName="du" />
+                <ScalarProperty Name="struct" ColumnName="struct" />
+                <ScalarProperty Name="struct_state" ColumnName="struct_state" />
+                <ScalarProperty Name="prudal" ColumnName="prudal" />
+                <ScalarProperty Name="dolgnost" ColumnName="dolgnost" />
+                <ScalarProperty Name="dr" ColumnName="dr" />
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="kategoria" ColumnName="kategoria" />
+                <ScalarProperty Name="outsource" ColumnName="outsource" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="C1cnpp" ColumnName="1cnpp" />
+                <ScalarProperty Name="di" ColumnName="di" />
+                <ScalarProperty Name="ipphone" ColumnName="ipphone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_agreement">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_agreement">
+              <MappingFragment StoreEntitySet="hostel_agreement">
+                <ScalarProperty Name="filename" ColumnName="filename" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="agrEnd" ColumnName="agrEnd" />
+                <ScalarProperty Name="agrBegin" ColumnName="agrBegin" />
+                <ScalarProperty Name="agrType" ColumnName="agrType" />
+                <ScalarProperty Name="hcostid" ColumnName="hcostid" />
+                <ScalarProperty Name="hcid" ColumnName="hcid" />
+                <ScalarProperty Name="fnpp" ColumnName="fnpp" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_catalog">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_catalog">
+              <MappingFragment StoreEntitySet="hostel_catalog">
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_contract">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_contract">
+              <MappingFragment StoreEntitySet="hostel_contract">
+                <ScalarProperty Name="dateConfirmPopulate" ColumnName="dateConfirmPopulate" />
+                <ScalarProperty Name="isPopulate" ColumnName="isPopulate" />
+                <ScalarProperty Name="ulivNrec" ColumnName="ulivNrec" />
+                <ScalarProperty Name="filenameRVP" ColumnName="filenameRVP" />
+                <ScalarProperty Name="filename" ColumnName="filename" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="change" ColumnName="change" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="costTotal" ColumnName="costTotal" />
+                <ScalarProperty Name="hcostid" ColumnName="hcostid" />
+                <ScalarProperty Name="housingId" ColumnName="housingId" />
+                <ScalarProperty Name="factLivEndDate" ColumnName="factLivEndDate" />
+                <ScalarProperty Name="factLivBegDate" ColumnName="factLivBegDate" />
+                <ScalarProperty Name="contEnd" ColumnName="contEnd" />
+                <ScalarProperty Name="contBegin" ColumnName="contBegin" />
+                <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="contType" ColumnName="contType" />
+                <ScalarProperty Name="contDate" ColumnName="contDate" />
+                <ScalarProperty Name="contNumber" ColumnName="contNumber" />
+                <ScalarProperty Name="student" ColumnName="student" />
+                <ScalarProperty Name="fnpp" ColumnName="fnpp" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_cost">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_cost">
+              <MappingFragment StoreEntitySet="hostel_cost">
+                <ScalarProperty Name="costOrder" ColumnName="costOrder" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="descriptionSocial" ColumnName="descriptionSocial" />
+                <ScalarProperty Name="costMonthSocial" ColumnName="costMonthSocial" />
+                <ScalarProperty Name="AmountDay" ColumnName="AmountDay" />
+                <ScalarProperty Name="costDay" ColumnName="costDay" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="contType" ColumnName="contType" />
+                <ScalarProperty Name="costDateBegin" ColumnName="costDateBegin" />
+                <ScalarProperty Name="costMonth" ColumnName="costMonth" />
+                <ScalarProperty Name="flatType" ColumnName="flatType" />
+                <ScalarProperty Name="hostel" ColumnName="hostel" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_cost_calculation">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_cost_calculation">
+              <MappingFragment StoreEntitySet="hostel_cost_calculation">
+                <ScalarProperty Name="amountOfPayments" ColumnName="amountOfPayments" />
+                <ScalarProperty Name="costId" ColumnName="costId" />
+                <ScalarProperty Name="calculationDescriptionId" ColumnName="calculationDescriptionId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_cost_order">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_cost_order">
+              <MappingFragment StoreEntitySet="hostel_cost_order">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="number" ColumnName="number" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_debt_payment">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_debt_payment">
+              <MappingFragment StoreEntitySet="hostel_debt_payment">
+                <ScalarProperty Name="debt" ColumnName="debt" />
+                <ScalarProperty Name="hcid" ColumnName="hcid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_housing">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_housing">
+              <MappingFragment StoreEntitySet="hostel_housing">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="room" ColumnName="room" />
+                <ScalarProperty Name="flatType" ColumnName="flatType" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="flat" ColumnName="flat" />
+                <ScalarProperty Name="block" ColumnName="block" />
+                <ScalarProperty Name="hostel" ColumnName="hostel" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_manual_agreement">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_manual_agreement">
+              <MappingFragment StoreEntitySet="hostel_manual_agreement">
+                <ScalarProperty Name="filename" ColumnName="filename" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="agrEnd" ColumnName="agrEnd" />
+                <ScalarProperty Name="agrBegin" ColumnName="agrBegin" />
+                <ScalarProperty Name="agrType" ColumnName="agrType" />
+                <ScalarProperty Name="hcostid" ColumnName="hcostid" />
+                <ScalarProperty Name="gal_order" ColumnName="gal_order" />
+                <ScalarProperty Name="student" ColumnName="student" />
+                <ScalarProperty Name="fnpp" ColumnName="fnpp" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hostel_settings">
+            <EntityTypeMapping TypeName="studbaseModel.hostel_settings">
+              <MappingFragment StoreEntitySet="hostel_settings">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="gal_chief">
+            <EntityTypeMapping TypeName="studbaseModel.gal_chief">
+              <MappingFragment StoreEntitySet="gal_chief">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="isChief" ColumnName="isChief" />
+                <ScalarProperty Name="cperson" ColumnName="cperson" />
+                <ScalarProperty Name="cdepartment" ColumnName="cdepartment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

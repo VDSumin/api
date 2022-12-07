@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SFAA.WindowsService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ListenPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10018</Value>
+    </Setting>
+    <Setting Name="ServerIp" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">195.69.204.53</Value>
+    </Setting>
+    <Setting Name="ListenPortDebug" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">83</Value>
+    </Setting>
+    <Setting Name="ServerIpDebug" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10.0.1.11</Value>
+    </Setting>
+    <Setting Name="DnsGal" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">galdb.omgtu</Value>
+    </Setting>
+    <Setting Name="GoszakupkiPythonScript" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\SFAA\goszakupki\parse3.py</Value>
+    </Setting>
+    <Setting Name="GoszakupkiJsonFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\SFAA\goszakupki\file.txt</Value>
+    </Setting>
+    <Setting Name="PythonPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Python3\python.exe</Value>
+    </Setting>
+    <Setting Name="GalDb" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OMGTU910</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
